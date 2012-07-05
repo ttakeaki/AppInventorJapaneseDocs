@@ -5,7 +5,7 @@
   <meta content="App Inventor for Android" name="description" />
   <meta content="Android, Blocks App Inventor, Mobile, Phone, IDE" name="keywords" />
   <title>
-   Known issues - App Inventor for Android
+   既知の問題 - App Inventor for Android
   </title>
   <link href="/static/images/appinventor-16.png" rel="SHORTCUT ICON" type="image/ico" />
   <link href="/static/images/appinventor-16.png" rel="icon" type="image/png" />
@@ -36,56 +36,56 @@
     <div class="content">
      <div class="content-body">
 
-<h3>App Inventor Beta Preview Known Issues</h3>
+<h3>App Inventor ベータプレビュー版の既知の問題</h3>
 
-<p>This is a beta preview release of App Inventor.  There are known minor bugs and glitches,
-  and occasional failures in connecting to the phone or in getting projects to build.
-  This version should be stable enough for personal or educational use,
-  although it would be a good idea to maintain backup copies of important projects.</>
+<p>
+これは App Inventor のベータプレビュー版のリリースです。<br>
+本バージョンには、既知の小さなバグや不具合があり、また、携帯電話とコンピューターの接続やプロジェクトのビルドに失敗する場合があることが報告されています。<br>
+本バージョンは個人向け、教育向けに利用するには十分に安定していますが、重要なプロジェクトについては、バックアップを取っておくことをおすすめします。
+</p>
 
-<p>There are also a couple of specific issues to watch out for.  We're
-  working on these, but we didn't want to hold up this release to wait until they 
-  were fixed.
-  <p>
+<p>
+上記以外にも、注意すべき問題点がいくつか存在します。<br>
+これらの問題の修正作業はまだ終わっていませんが、修正作業の終了まで本バージョンのリリースを遅らせるほどに重大なものではないと判断しました。
+</p>
   
-<h4>Known Issues List:</h4>
+<h4>既知の問題のリスト</h4>
 
 <ul style="disc">
 
-<li>Unable to load large projects: This version of App Inventor cannot load projects as
-  large as last year's Google version.   If you are trying to transfer over a large
-  project (e.g., large numbers of image or sound files, or very large individual files)
-  you may see the error "Unable to load project".  The problem may be worse on slow
-  connections.
+<li>
+大規模なプロジェクトを読み込めない: <br>
+本バージョンの App Inventor は、Google がホストしていたバージョンよりも、読み込む事ができるプロジェクトのサイズ上限が小さくなっています。<br>
+大量の画像ファイルや音声ファイルを含んでいる、ファイル数が非常に多いといった、大規模なプロジェクトを Google がホストしていたバージョンから持ってこようとするとき、「プロジェクトを読み込めません」というエラーメッセージが表示されることがあります。<br>
+この問題は接続が遅くなる問題よりも重大である可能性があります。
 </li>
   
 <p />
 
-<li>Manipulating blocks while switching screens:  If you are working with a multiscreen
-app and you switch screens, do not move blocks with the mouse or click links in the
-Blocks Editor until the new screen is done loading.  If you do so, the Blocks editor
-can become confused about which screen you are working on, and you can get errors, or even
-lose blocks.  The same warning applies when you switch between projects. When loading a new
-project, don't use the Blocks editor until the project has finished loading.
+<li>
+コンピューターの画面を切り替えて作業するときのブロックの扱い: <br>
+複数の画面を使う作業環境* で、画面を切り替えるとき、切り替えた先の画面の読み込みが完了するまでは、Blocks Editor 上にあるブロックをマウスで動かしたり、ブロック間のリンクをクリックしたりしないでください。<br>
+こうした操作を行うと、Blocks Editor は現在どの画面で作業が進んでいるのかを判定できず、エラーになることがあります。場合によっては編集中のブロックが失われてしまうこともあります。<br>
+プロジェクトを切り替えながら作業する場合にも同様の注意が必要です。新たにプロジェクトを読み込むときは、プロジェクトの読み込みが完了するまで、Blocks Editor を操作しないでください。
 </li>
 
 <p />
 
-<li>Unstable project loading:
-We've gotten reports of projects loading incorrectly, with blocks missing.   We're trying
-to track this down, but in the meantime be diligent about keeping local backups,
-especially for large and important projects.
+<li>
+プロジェクトの読み込みが不安定になる: <br>
+一部のブロックが欠けているなど、プロジェクトが正常に読み込まれない事例が報告されています。<br>
+この問題はまだ修正されていないため、当面はローカルにバックアップを取って対処していただきますようお願いします。<br>
+特に、大規模なプロジェクト、重要なプロジェクトに関しては、バックアップを取ることをおすすめします。
 </li>
 
 <p />
 
-<li>Failure to package projects:
-We're currently seeing a 6% failure rate in attempts to package projects.
-Many of these appear to be intermittent.  If your project fails to
-package, try again once or twice.  Another source of failure may
-result from case collisions in the names of media files: If your
-project has two pictures named, for example, MyPict.jpg and mypict.jpg, this may cause
-errors.
+<li>
+プロジェクトのパッケージ化に失敗する: <br>
+現時点での統計によると、6 % の確率でプロジェクトのパッケージ化に失敗するようです。<br>
+パッケージ化の失敗の多くは断続的に起きているので、プロジェクトのパッケージ化に失敗する場合は、まず１、２回再試行してみてください。<br>
+プロジェクトのパッケージ化に失敗する原因として、メディアファイルの名前で大文字・小文字の別だけが異なるものが衝突しているということも考えられます。<br>
+例えば、MyPict.jpg というファイルと、mypict.jpg というファイルがそれぞれプロジェクトにある場合、これらのファイル名が衝突することでエラーが起きていることがあります。
 </li>
 
 </ul>
