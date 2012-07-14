@@ -5,7 +5,7 @@
   <meta content="App Inventor for Android" name="description" />
   <meta content="Android, Blocks App Inventor, Mobile, Phone, IDE" name="keywords" />
   <title>
-   Connection Issues - App Inventor for Android
+   接続時の問題 - App Inventor for Android
   </title>
   <link href="/static/images/appinventor-16.png" rel="SHORTCUT ICON" type="image/ico" />
   <link href="/static/images/appinventor-16.png" rel="icon" type="image/png" />
@@ -57,214 +57,190 @@
      <div class="content-body">
       <div class="learn-page">
        <h1>
-        Work-Arounds &amp; Solutions for Connecting Phones to the Blocks Editor
+        ブロックエディターと携帯電話の接続で問題が起きたときの回避策 &amp; 解決方法
        </h1>
        <h2>
-        Summary
+        要約
        </h2>
        <p>
-        This page may provide some help on troubleshooting connection problems between the
-                phone and Blocks editor. There are several different causes for these. We're
-                attempting to sort through the various symptoms, causes, and solutions. Thanks for
-                your patience and assistance while we're doing this.
+        このページでは、ブロックエディターと携帯電話との接続で問題が起きたときのトラブルシューティングの方法を説明しています。<br>
+        接続に問題が起きる原因はいくつか考えられ、ここでは症状、原因、および解決方法に分け説明を行っています。<br>
+        このページの内容を作成している間、忍耐強く待ってくれた方、協力してくれた方に感謝いたします。
        </p>
        <h2>
-        Work-Arounds &amp; Solutions
+        回避策 &amp; 解決方法
        </h2>
        <p>
-        Here are a few of the issues we know about, with work-arounds. Most of these are
-                identified by looking at the Java console and what happens on the phone and in the
-                blocks editor. You can find instructions for how to view the Java console at bottom
-                of the documentation on
+        回避策に関して、これからここで挙げる内容の多くは、Java コンソール上の情報を調べたり、携帯電話上で発生している現象を調べることで特定されたものである、ということを知っておいてください。
+        Java コンソールの使い方は、
         <a href="/learn/reference/other/testing.html">
-         testing
+         テスト
         </a>
-        .
+        のページに説明があります。
        </p>
        <div class="issue">
         <strong>
-         Issue
+         症状:
         </strong>
-        : After clicking
+        ブロックエディターで
         <em>
-         Connect To Phone
+         携帯電話に接続
         </em>
-        in the Blocks
-                Editor, the white Screen1 on the phone flashes and disappears, or you never see it
-                at all and the Blocks Editor tells you to plug in the phone. The Java console has a
-                message saying "Failed in setupSocket".
+         をクリックしたあと、真っ白な Screen1 が携帯電話の画面に表示されてすぐ消えてしまう。<br>
+         あるいは、携帯電話には何も表示されず、ブロックエディターに携帯電話を接続するよう促すメッセージが表示される。<br>
+         この症状が起きたとき、Java コンソールでは "Failed in setupSocket" というメッセージが表示されている。
        </div>
        <div class="cause">
         <strong>
-         Cause:
+         原因:
         </strong>
-        The most likely cause of this is that your phone is running
-                Android 1.5. (If not and these are your exact symptoms, please let us know).
+        もっとも可能性の高い原因は、携帯電話に Android 1.5 が搭載されている、ということです。（もし 1.5 より高いバージョンの Android を使っていて、同様の症状が出た場合は、お手数ですが開発者までご連絡ください）
        </div>
        <div class="workaround">
         <strong>
-         Workaround:
+         回避策:
         </strong>
-        Android 1.5 is not currently working with App Inventor
-                in connected phone. We're happy to report that we have a fix for this! Your Android
-                1.5 phones will work in connected mode the next time we update our App Inventor
-                servers (probably in a week or two). In the meantime, we recommend using the
-                emulator (make sure it is version 1.6 or higher) for connected development, and
-                then downloading your packaged apps to your phone.
+        現時点で、App Inventor は Android 1.5 に対応していません。この問題に対する修正はすでに準備が整っており、次回の App Inventor サーバーのアップデートでこの修正が反映され、Android 1.5 も正常に接続できるようになる予定です（１〜２週間後には反映予定）*
+        しばらくの間は、接続先として OS を Android 1.6 以降として作成したエミュレーターをお使いいただき、別途パッケージ化したアプリケーションを携s帯電話の実機にダウンロードする方法で対処してください。
        </div>
        <br />
        <div class="issue">
         <strong>
-         Issue:
+         症状:
         </strong>
-        Your phone is running version 1.6 or newer. After clicking
+        Android 1.6 以降を搭載した携帯電話を使っていて、ブロックエディターで
         <em>
-         Connect To Phone
+         携帯電話に接続
         </em>
-        in the Blocks Editor, the white Screen1 appears
-                eventually, but the Blocks Editor tells you to plug in the phone and the Java
-                console has a message saying "Failed in setupSocket". This might happen every time
-                you try to connect, or just some of the time.
+        をクリックしたあと、しばらくして真っ白な Screen1 が携帯電話の画面に表示される。<br>
+        このとき、ブロックエディターに携帯電話を接続するよう促すメッセージが表示され、Java コンソールでは "Failed in setupSocket" というメッセージが表示されている。<br>
+        この症状は接続時に毎回起こる場合もあれば、そうでない場合もある。
        </div>
        <div class="cause">
         <strong>
-         Cause:
+         原因:
         </strong>
-        It looks like there is a timing issue where the app that
-                runs on the phone to connect to the blocks editor doesn't start up quickly enough
-                and the blocks editor gives up and assumes it cannot make the connection.
+        これは接続のタイミング問題で、携帯電話からブロックエディターに接続しようとしたアプリケーションの起動が遅れ、ブロックエディターがタイムアウトし、接続失敗と判定したと考えられます。
        </div>
        <div class="workaround">
         <strong>
-         Workaround:
+         回避策:
         </strong>
-        You can try stopping other apps on your phone that
-                might be slowing it down (e.g., sync services, Twitter, etc.) and then try
-                connecting to the blocks editor. If this works for you then you probably are
-                experiencing the timing problem mentioned above. We believe we have a fix for this
-                that will be available the next time we update the App Inventor servers (in a week
-                or two).
+        携帯電話の処理速度を落としていると考えられるアプリケーション（同期サービスや Twitter など）を終了させ、ブロックエディターへの接続を再度試みてください。<br>
+        これでうまくいった場合は、上述のタイミング問題が発生しているものと思われます。<br>
+        この問題に対する修正を次回の App Inventor サーバーのアップデートに入れられるよう、鋭意作業を進めています（１〜２週間で完了の予定です）*
        </div>
        <br />
        <div class="issue">
         <strong>
-         Issue:
+         症状:
         </strong>
-        The Java console prints the message "adb-forward: Device
-                rejected command: cannot bind socket" and the blocks editor fails to connect to the
-                phone.
+        Java コンソールに "adb-forward: Divice rejected command: cannot bind socket" というメッセージが表示され、ブロックエディターが携帯電話と接続できない。
        </div>
        <div class="cause">
         <strong>
-         Cause:
+         原因:
         </strong>
-        Most likely, some other application on your computer is
-                using port 9997.
+        もっとも可能性が高い原因は、お使いのコンピューターで起動中の他のアプリが 9997 番ポートを使っている、というものです。
        </div>
        <div class="workaround">
         <strong>
-         Workaround:
+         回避策:
         </strong>
-        You can usually use a command on your computer to find
-                out which applications might have the port open.
+        コマンドラインでどのアプリケーションがどのポートを使っているかを特定することができます。
         <p>
-         For Linux (and perhaps Mac?) open a shell (Terminal) window and type
+         Linux （おそらく Macintosh でも同様）の場合は、シェル（ターミナル）ウィンドウを開き、
          <br />
          <code>
           lsof | grep 9997
          </code>
          <br />
-         to see the name and process id of the application that has port 9997 open.
+         と入力してください。<br>
+         これで 9997 番のポートを使用しているアプリケーションの名前と、プロセス ID が表示されます。
         </p>
         <p>
-         On Windows, use the command
+         Windows の場合は、コマンドプロンプトを開き、
          <br />
          <code>
           netstat -ao |find /i "9997"
          </code>
          <br />
-         At the end of the line is the process id (PID). Use the command
+         と入力してください。<br>
+         表示されたテキストの末尾にプロセス ID (PID) が表示されていますので、
          <br />
          <code>
           tasklist |find /i "PID"
          </code>
+         と入力してください。
         </p>
         <p>
-         If you stop the application that was using port 9997 then the blocks editor
-                  should be able successfully run the "adb forward" command and, hopefully, connect
-                  to your phone (assuming you don't also have one of the other problems mentioned
-                  above).
+         9997 番のポートを使用していたアプリケーションを停止したら、ブロックエディターは正常に "adb forward" を実行できる状態になり、携帯電話に接続できるようになっているはずです。（ただし、上述した他の問題が発生していないことが前提です）
         </p>
         <p>
-         In the future we may allow the blocks editor to use ports other than 9997 to
-                  connect to the phone, but it will probably not be possible in the next server
-                  update.
+         将来的には、9997 番以外のポートでもブロックエディターから携帯電話に接続できるよう修正する予定ですが、次回のサーバーのアップデートには反映されない予定です。
         </p>
        </div>
        <br />
        <div class="issue">
         <strong>
-         Issue:
+         症状:
         </strong>
-        When you try to Connect to Phone the blocks editor tells
-                you to plug in a phone. The Java console contains the line: Device connected:
-                ????????????
+        携帯電話に接続しようとすると、ブロックエディターで携帯電話を接続するよう促すメッセージが表示され、Java コンソールに "Device connected: ????????????" というメッセージを含む行が表示されている。
        </div>
        <div class="cause">
         <strong>
-         Cause:
+         原因:
         </strong>
-        Your phone is not being recognized by the ADB (Android
-                Debug Bridge). This could be an issue with drivers or permissions.
+        adb (Android Debug Bridge) から、お使いの携帯電話が認識されていません。<br>
+        ドライバー、あるいはパーミッションの設定に問題があると思われます。
        </div>
        <div class="workaround">
         <strong>
-         Workaround:
+         回避策:
         </strong>
-        The solution varies depending on the type of system
-                you are on and the type of phone you have. Search the App Inventor Forum and other
-                Android forums on the web to find advice for your particular system and phone. Many
-                people have posted fixes with pointers to drivers or instructions. You will know
-                that you have solved this particular problem when the command "adb devices" shows
-                you a device id that is a combination of letters and numbers. See the documentation
-                under "Testing and Debugging" for information on how to run the adb program.
+        解決策はお使いのシステムと、携帯電話のモデルによって異なります。<br>
+        App Inventor Forum** や、Web 上にある他の Android 関連のフォーラムをあたり、お使いのシステムと携帯電話のモデルに合った解決方法を探してみてください。<br>
+        多くの人たちが修正方法や、ドライバーや解決方法の説明へのポインターを投稿しているはずです。<br>
+        "adb devices" を実行したとき、デバイス ID が英数字を組み合わせた文字列として表示されれば、問題は解決したことになります。<br>
+        adb コマンドの使い方については、「テストとデバッグ」のページを参照してください。
        </div>
        <br />
        <div class="issue">
         <strong>
-         Issue:
+         症状:
         </strong>
-        You can connect to the phone but you are not seeing any of
-                your media on the phone (images, sounds). The Java console might have a message
-                like "ddms: transfer error: Permission denied" and
-                "yacodeblocks.AndroidControllerException: Failed to upload file". Or the Blocks
-                Editor migth give an error "Can't play the file meow.wav."
+        携帯電話への接続はできたが、携帯電話上の画像や音声などのメディアファイルが参照できない。<br>
+        Java コンソールには "ddms: transfer error: Permission denied" または "yacodeblocks.AndroidControllerException: Failed to upload file" というメッセージが表示されている。<br>
+        ブロックエディターに "Can't play the file meow.wav" （ "meow.wav" の部分はアクセスしようとしたファイルの名前）というエラーが表示されていることがある。
        </div>
        <div class="cause">
         <strong>
-         Cause:
+         原因:
         </strong>
-        The phone's USB connection mode is set to the wrong option.
+        携帯電話の USB 接続モードの設定に誤りがあります。
        </div>
        <div class="workaround">
         <strong>
-         Workaround:
+         回避策:
         </strong>
-        Pull down the screen notification panel (where the USB
-                icon should be showing), and press the "USB connected" button. The options shown
-                will depend on the phone model:
+        携帯電話の通知パネルをプルダウンで表示させます（ USB 接続のアイコンが表示されているはずです）<br>
+        次に、「USB 接続」ボタンをクリックします。<br>
+        お使いの携帯電話のモデルによって、クリックした後に表示される内容には若干の差があります。
         <ul>
          <li>
-          On the Nexus One, you'll see a button to "Turn on USB Storage" â&euro;&rdquo; don't select
-                  it.
+          Nexus One をお使いの場合は、「USB ストレージを有効にする」ボタンが表示されていますが、これは選択しないでください。
          </li>
          <li>
-          On the Droid, you'll see four different options. Select the option for
-                  "Windows Media Sync".
+          Droid をお使いの場合は、４つのオプションが表示されています。「 Windows Media Sync 」を選択してください。***
          </li>
         </ul>
        </div>
        <br />
+       <p>
+       *訳注: 原文で "Next update" とされているのはいつのものか、実際に修正が行われたのかの確認が必要。<br>
+       **訳注: 日本語の情報源としては、<a href="https://groups.google.com/group/app-inventor-jp" target="_blank">日本App Inventorユーザー会</a>の Google グループがあります。また、日本 Android の会のメーリングリストのログからも様々な情報を得る事ができます。困ったらこのあたりをのぞいてみてください。新たに質問するときは、マナーを大切に。<br>
+       ***訳注: Droid での検証が必要
+       </p>
       </div>
      </div>
     </div>
