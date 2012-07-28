@@ -5,7 +5,7 @@
   <meta content="App Inventor for Android" name="description" />
   <meta content="Android, Blocks App Inventor, Mobile, Phone, IDE" name="keywords" />
   <title>
-   Setup - App Inventor for Android
+   セットアップ - App Inventor for Android
   </title>
   <link href="/static/images/appinventor-16.png" rel="SHORTCUT ICON" type="image/ico" />
   <link href="/static/images/appinventor-16.png" rel="icon" type="image/png" />
@@ -48,24 +48,21 @@
         App Inventor Setup
        </h1>
        <p>
-        App Inventor runs through a Web browser. If you're using a phone, you work with the
-                phone connected to your computer by a USB cord. Your app will emerge on the phone
-                bit by bit as you work. If you don't have a phone, there's a phone emulator
-                included with the App Inventor setup package that you can use instead. When you're
-                done building, you can "package" your finished app to produce an "application
-                package" (Android apk file) that can be shared around and installed on any Android
-                phone, just like any other Android app.
+        App Inventor は web ブラウザー上で動作します。<br>
+        携帯電話をお持ちの場合は、携帯電話を USB ケーブルでコンピューターにつなぎ、作業する事ができます。作業を進めるのに従い、作成したアプリケーションがだんだんと携帯電話の上にあらわれてきます。<br>
+        携帯電話をお持ちでない場合は、App Inventor のパッケージに含まれてる携帯電話のエミュレーターを使って作業することができます。<br>
+        アプリケーションの組み立てが終わったら、出来上がったアプリケーションを「パッケージ」し、「アプリケーションパッケージ」（つまり、Android の apk ファイル）を作り、他の Android アプリケーションと同じように、アプリケーションを共有したり、Android 携帯電話にインストールしたりできるようにします。<br>
        </p>
        <p>
-        To get started you need to complete the following steps:
+        アプリケーション開発を始めるために、以下の手順を完了する必要があります
        </p>
        <ul>
         <li>
          <b>
-          Step 1:
+          手順 1:
          </b>
          <a href="#setupComputer">
-          Set up your computer
+          コンピューターをセットアップする
          </a>
         </li>
         <li class="c2">
@@ -73,26 +70,22 @@
         </li>
         <li>
          <b>
-          Step 2:
+          手順 2:
          </b>
-         Do one of the following, depending on whether you will develop on
-                  an Android phone or with the emulator:
-         <ul>
+         Android 携帯電話を使うか、エミュレーターを使うかにより、以下のどちらかの手順を完了してください。
+          <ul>
           <li>
            <a href="/learn/setup/phone.html">
-            Set up your Android phone
+            Android 携帯電話をセットアップする
            </a>
-           and
            <a href="/learn/setup/hellopurr/hellopurrphonepart1.html">
-            build your first app with
-                      the phone
+            携帯電話上で、最初のアプリケーションを組み立てる
            </a>
-           , OR
+           もしくは
           </li>
           <li>
            <a href="/learn/setup/hellopurr/hellopurremulatorpart1.html">
-            Build your first
-                      app with the emulator
+            エミュレーター上で、最初のアプリケーションを組み立てる
            </a>
           </li>
          </ul>
@@ -101,138 +94,139 @@
        <h2>
         <a name="setupComputer">
         </a>
-        Set up your computer
+        コンピューターをセットアップする
        </h2>
        <h4>
-        System requirements:
+        システム要件:
        </h4>
        <p>
-        Computer and operating system
+        コンピューターとOS
        </p>
        <ul>
         <li>
-         Macintosh (with Intel processor): Mac OS X 10.5, 10.6
+         Macintosh (Intel プロセッサー搭載のもの): Mac OS X 10.5, 10.6*
         </li>
         <li>
          Windows: Windows XP, Windows Vista, Windows 7
         </li>
         <li>
-         GNU/Linux: Ubuntu 8+, Debian 5+
+         GNU/Linux: Ubuntu 8 以降, Debian 5 以降
         </li>
        </ul>
        <p>
-        Browser
+        ブラウザー
        </p>
        <ul>
         <li>
-         Mozilla Firefox 3.6 or higher
+         Mozilla Firefox 3.6 以降
          <ul>
           <li>
-           Note: If you are using Firefox with the
+           Note: Firefox に
            <em>
             NoScript
            </em>
-           extension, you'll
-                    need to turn the extension off. See the
+           拡張機能をインストールしてお使いの場合、この拡張機能を無効にする必要があります。
            <a href="../troubleshooting.html#BlocksEditor">
-            note on the troubleshooting page
+            トラブルシューティングのページの該当項目
            </a>
-           .
+           もご覧ください。
           </li>
          </ul>
         </li>
         <li>
-         Apple Safari 5.0 or higher
+         Apple Safari 5.0 以降
         </li>
         <li>
-         Google Chrome 4.0 or higher
+         Google Chrome 4.0 以降
         </li>
         <li>
-         Microsoft Internet Explorer 7 or higher
+         Microsoft Internet Explorer 7 以降
         </li>
        </ul>
        <h4>
-        Test your Java configuration
+        Java 設定を確認する
        </h4>
        <p>
-        Your computer needs to run Java 6 (also known as Java 1.6). You can download Java
-                from
+        お使いのコンピューターで Java 6 (Java 1.6 と呼ばれる場合もあります) が動作する必要があります。<br>
+        Java は
         <a href="http://www.java.com">
          www.java.com
         </a>
-        .
+        からダウンロード出来ます。
        </p>
        <p>
-        Test your Java configuration by performing both of the following tests:
+        Java の設定を、以下のテストを両方行って確認してください。
        </p>
        <ol>
         <li>
-         Visit the
          <a href="http://www.java.com/en/download/help/testvm.xml">
           Java test
                 page
          </a>
-         . You should see a message that Java is working and that the version is
-                Java 1.6.
+         を web ブラウザーで開いてください。<br>
+         Java が動作していて、かつバージョンが Java 1.6 であることを示すメッセージが表示されることを確認してください。
         </li>
         <li>
-         Run the AppInventor Java test by clicking on
+         App Inventor の Java テストを
          <a href="misc/JWSTest/AppInvJWSTest.html">
-          this link
+          このリンク
          </a>
-         .
-                This will check that your browser is properly configured to run Java, and that your
-                computer can launch applications with Java Web Start.
+         を開いて実施してください。<br>
+         このテストは、お使いのブラウザーが Java が動作するように設定されているか、および、Java web Start でアプリケーションを起動できるかを確認するものです。
         </li>
        </ol>
-       App Inventor will not work on your computer if these tests do not succeed. Don't
-              go on to try to use App Inventor until you've dealt with the issue.
+       テストが失敗した場合、お使いのコンピューターで App Inventor は動作しません。<br>
+       問題が解決するまで、App Inventor を使って開発はしないようにしてください。
        <a name="install">
        </a>
        <h4>
-        Install the App Inventor Setup Software
+        App Inventor Setup ソフトウェアをインストールする
        </h4>
        <p>
-        Before you can use App Inventor, you need to install some software on your
-                computer. The software you need is provided in a package called
+        App Inventor を使う前に、お使いのコンピューターにソフトウェアをインストールする必要があります。<br>
+        必要なソフトウェアは
         <em>
          App Inventor
                 Setup
         </em>
-        . Follow the instructions for your operating system to do the
-                installation, and then go on to build the demo app (Hello Purr) with the phone or
-                with the emulator.
+        というパッケージにまとめられて提供されています。<br>
+        お使いの OS に合わせたインストール手順に従い、インストールを行ってください。<br>
+        インストールが終わったら、携帯電話、あるいはエミュレーター上で、デモアプリケーション (Hello Purr) を組み立てる手順に移りましょう。
        </p>
        <ul>
         <li>
          <a href="setupmac.html">
-          Instructions for Mac OS X
+          Mac OS X での手順
          </a>
         </li>
         <li>
          <a href="setuplinux.html">
-          Instructions for GNU/Linux
+          GNU/Linux での手順
          </a>
         </li>
         <li>
          <a href="setupwindows.html">
-          Instructions for Windows
+          Windows での手順
          </a>
         </li>
        </ul>
        <blockquote class="notice">
-        Something not working right? Visit the
+        うまくいきませんか？
         <a href="../troubleshooting.html">
-         troubleshooting page
+         トラブルシューティング
         </a>
-        , or check the
+        や、
         <a href="../../forum">
-         App Inventor User Forum
+         App Inventor User Forum **
         </a>
-        for help.
+        で、解決方法を探してみてください。
        </blockquote>
       </div>
      </div>
+    <p>
+     * MacOSX 10.7 での対応状況を調査し、掲載する必要あり<br>
+     ** 日本語の情報源としては、<a href="https://groups.google.com/group/app-inventor-jp" target="_blank">日本App Inventorユーザー会</a>の Google グループがあります。
+    </p>
     </div>
     <div class="footer">
      <script language = "JavaScript">createFooter();</script><br>
